@@ -17,7 +17,7 @@ To start and operate your organization, computing is the essential first step, r
 - Adaptability for cost optimization
 - Availability of computing resources in your desired location
 
-### Amazon EC2 Overview
+## Amazon EC2 Overview
 **Amazon Elastic Compute Cloud (EC2)** is a web service that provides resizable compute capacity in the cloud. It allows users to launch and manage virtual servers, called instances, on Amazon's infrastructure, making it easy to scale capacity up or down as needed. EC2 instances can be used for a wide variety of computing tasks, from running simple web applications to complex big data processing jobs.
 
 <center>
@@ -26,12 +26,13 @@ To start and operate your organization, computing is the essential first step, r
 
 </center>
 
-#### Steps to complete the lab
+### Steps to complete the lab
 The lab will be completed using the following steps
-- **Create a new key pair**
-    - Navigate to https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#KeyPairs:
-    - Click "Create key pair"
 
+#### Create a new key pair
+
+- Navigate to ![KeyPairs](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1)
+- Click "Create key pair"
     <center>
 
     ![Click on Create Key Pair](/docs/assets/create-new-key-pair.jpeg)
@@ -39,7 +40,6 @@ The lab will be completed using the following steps
      </center>
 
     - Type "demoWindowKeyPair"
-
      <center>
 
     ![Click on Create Key Pair](/docs/assets/add-the-name-field.jpeg)
@@ -47,70 +47,79 @@ The lab will be completed using the following steps
      </center>
 
     - Click "Create key pair"
-
      <center>
 
     ![Click on Create Key Pair](/docs/assets/create-key-pairs.jpeg)
 
      </center>
      
-- **Launch a Web Server Instance**
-    - Navigate to https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#LaunchInstances:
-    - Click the "Name" field. Type "demoWebServer-IMD"
+#### Launch a Web Server Instance
 
+- Navigate to ![LaunchInstances](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1)
+- Click the "Name" field. Type "demoWebServer-IMD"
     <center>
 
     ![enter-instance-name](/docs/assets/enter-name-filed.jpeg)
 
     </center>
 
-    - Browse for AMI type
+- Browse for AMI type
      <center>
 
      ![browse-ami](/docs/assets/browse-ami.jpeg)
 
     </center>
 
-    - Click dropdown and select the Key Pair "demoWindowKeyPair"
-
+- Click dropdown and select the Key Pair "demoWindowKeyPair"
      <center>
 
      ![select-key-pair](/docs/assets/create-key-pairs.jpeg)
 
     </center>
 
-    - Select VPC, Subnet and Enable "Auto-assign public IP"
-
+- Select VPC, Subnet and Enable "Auto-assign public IP"
      <center>
 
      ![select-vpc-subnet](/docs/assets/vpc-subnet-auto_ip.jpeg)
 
     </center>
 
+- Click the "Security group name  - required" field. Type "Immersion Day - Web Server"
+- Click the "Description  - required    Info" field. Type "Immersion Day - Web Server"
      <center>
 
-     ![enter-instance-name](/docs/assets/enter-name-filed.jpeg)
+     ![set-security-group](/docs/assets/sec-group-description.jpeg)
 
     </center>
 
+- Allow TCP/80 for Web ServiceSelect My IP in the source. Click "Add security group rule"
      <center>
 
-     ![enter-instance-name](/docs/assets/enter-name-filed.jpeg)
+     ![select-group-rule](/docs/assets/add-security-rule.jpeg)
 
     </center>
 
+- Expand the "Advanced details" and the "User data" script. Copy script from [here](/i.%20aws-general-immersion-day/01-basic-modules/a.%20compute-ec2/user-data-script.sh) and paste in the "User data" field.
      <center>
 
-     ![enter-instance-name](/docs/assets/enter-name-filed.jpeg)
+     ![copy-user-data-script](/docs/assets/copy-user-data.jpeg)
 
     </center>
 
+- Click on "Launch Instance"
      <center>
 
-     ![enter-instance-name](/docs/assets/enter-name-filed.jpeg)
+     ![launch-instance](/docs/assets/launch-ec2-instance.jpeg)
 
     </center>
 
-- Connect to your linux instance
-- Connect to your Linux instance using Session Manager (Optional)
-- Connect to EC2 Instance using PuTTy (Optional)
+- Successfully launch EC2 Instance
+    <center>
+
+     ![instance-list](/docs/assets/ec2-successful.jpeg)
+
+    </center>
+
+#### Connect to your linux instance
+#### Connect to your Linux instance using Session Manager (Optional)
+#### Connect to EC2 Instance using PuTTy (Optional)
