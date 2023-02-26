@@ -1,0 +1,4 @@
+site_name: AWS Studio Labs
+extra_css: [extra.css]
+images: /Volumes/extSD/mit-critical/code-env/aws-workshop-studio-labs/docs/assets
+theme: readthedocs
